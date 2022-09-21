@@ -7,7 +7,6 @@ import 'package:travel_app/widgets/responsive_button.dart';
 
 class DetailPage extends StatefulWidget {
   const DetailPage({Key? key}) : super(key: key);
-
   @override
   State<DetailPage> createState() => _DetailPageState();
 }
@@ -135,33 +134,34 @@ class _DetailPageState extends State<DetailPage> {
                           height: 10,
                         ),
                         Wrap(
-                            children: List.generate(5, (index) {
-                          return InkWell(
-                            onTap: () {
-                              setState(() {
-                                selectedIndex = index;
-                              });
-                            },
-                            child: Container(
-                              margin: const EdgeInsets.only(right: 10),
-                              child: AppButtons(
-                                size: 50,
-                                color: selectedIndex == index
-                                    ? Colors.white
-                                    : Colors.black,
-                                backgroundColor: selectedIndex == index
-                                    ? Colors.black
-                                    : Colors.white,
-                                borderColor: selectedIndex == index
-                                    ? Colors.black
-                                    : Colors.white,
-                                text: (index + 1).toString(),
-                                // icon: Icons.favorite,
-                                // isIcon: true,
+                          children: List.generate(5, (index) {
+                            return InkWell(
+                              onTap: () {
+                                setState(() {
+                                  selectedIndex = index;
+                                });
+                              },
+                              child: Container(
+                                margin: const EdgeInsets.only(right: 10),
+                                child: AppButtons(
+                                  size: 50,
+                                  color: selectedIndex == index
+                                      ? Colors.white
+                                      : Colors.black,
+                                  backgroundColor: selectedIndex == index
+                                      ? Colors.black
+                                      : Colors.white,
+                                  borderColor: selectedIndex == index
+                                      ? Colors.black
+                                      : Colors.white,
+                                  text: (index + 1).toString(),
+                                  // icon: Icons.favorite,
+                                  // isIcon: true,
+                                ),
                               ),
-                            ),
-                          );
-                        })),
+                            );
+                          }),
+                        ),
                         SizedBox(
                           height: 20,
                         ),
@@ -175,33 +175,34 @@ class _DetailPageState extends State<DetailPage> {
                         ),
                         AppText(
                           text:
-                              "Traveling is one of the best ways to learn more about yourself.,You'll come home knowing yourself better, and with a fresh perspective on what you want out of life.",
+                              "  Traveling is one of the best ways to learn more about yourself.,You'll come home knowing yourself better, and with a fresh perspective on what you want out of life.",
                           color: AppColors.mainTextColor,
                           size: 14,
-                        )
+                        ),
                       ]),
                 )),
             Positioned(
-                bottom: 20,
-                left: 20,
-                right: 20,
-                child: Row(
-                  children: [
-                    AppButtons(
-                        size: 60,
-                        color: AppColors.textColor1,
-                        backgroundColor: Colors.white,
-                        borderColor: AppColors.textColor1,
-                        isIcon: true,
-                        icon: Icons.favorite),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    ResponsiveButton(
-                      isResponsive: true,
-                    )
-                  ],
-                ))
+              bottom: 20,
+              left: 20,
+              right: 20,
+              child: Row(
+                children: [
+                  AppButtons(
+                      size: 60,
+                      color: AppColors.textColor1,
+                      backgroundColor: Colors.white,
+                      borderColor: AppColors.textColor1,
+                      isIcon: true,
+                      icon: Icons.favorite),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  ResponsiveButton(
+                    isResponsive: true,
+                  )
+                ],
+              ),
+            ),
           ],
         ),
       ),
