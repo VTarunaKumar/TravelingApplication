@@ -149,10 +149,10 @@ class _DetailPageState extends State<DetailPage> {
                                       ? Colors.white
                                       : Colors.black,
                                   backgroundColor: selectedIndex == index
-                                      ? Colors.black
+                                      ? Colors.black.withOpacity(0.7)
                                       : Colors.white,
                                   borderColor: selectedIndex == index
-                                      ? Colors.black
+                                      ? Colors.black.withOpacity(0.5)
                                       : Colors.white,
                                   text: (index + 1).toString(),
                                   // icon: Icons.favorite,
